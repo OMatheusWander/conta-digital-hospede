@@ -7,7 +7,6 @@ export interface Medicao {
   data: Date;
   nome: string;
   unidadeConsumidora: string;
-  hypolito: string;
   numeroHospedes: number;
   leitura: number;
   observacoes?: string;
@@ -19,7 +18,6 @@ export interface MedicaoFormData {
   data: Date | undefined;
   nome: string;
   unidadeConsumidora: string;
-  hypolito: string;
   numeroHospedes: number | undefined;
   leitura: number | undefined;
   observacoes?: string;
