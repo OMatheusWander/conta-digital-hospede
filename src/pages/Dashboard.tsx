@@ -49,7 +49,7 @@ export default function Dashboard() {
   return (
     <div className="container py-8 max-w-6xl">
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-bold">Sistema de Medições do Grupo OC GROUP</h1>
+        <h1 className="text-3xl font-bold">Sistema de Medições da OC GROUP</h1>
         <p className="text-muted-foreground mt-2">
           Controle de leitura de faturas de água e luz para imóveis
         </p>
