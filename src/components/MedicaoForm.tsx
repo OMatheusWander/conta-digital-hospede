@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -325,17 +324,19 @@ export function MedicaoForm({ onSaveMedicao }: MedicaoFormProps) {
                   fullWidth
                 />
               </Grid>
+              
+              <Grid item xs={12}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  size="large"
+                  disabled={loading}
+                  startIcon={loading ? <CircularProgress size={20} /> : null}
+                >
+                  {t('medicao.salvar')}
+                </Button>
+              </Grid>
             </Grid>
-            
-            <Button
-              type="submit"
-              variant="contained"
-              size="large"
-              disabled={loading}
-              startIcon={loading ? <CircularProgress size={20} /> : null}
-            >
-              {t('medicao.salvar')}
-            </Button>
           </Stack>
         </Box>
       </CardContent>

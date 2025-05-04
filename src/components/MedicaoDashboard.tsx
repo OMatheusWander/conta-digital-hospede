@@ -18,7 +18,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { format, subDays, differenceInDays, startOfWeek, differenceInWeeks, startOfMonth, differenceInMonths } from 'date-fns';
+import { format, subDays, startOfWeek, startOfMonth } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { useTranslation } from 'react-i18next';
 import { Medicao, TipoMedicao } from '@/types';
