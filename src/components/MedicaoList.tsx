@@ -24,8 +24,7 @@ export function MedicaoList({ medicoes, onDeleteMedicao }: MedicaoListProps) {
   const filteredMedicoes = medicoes.filter((medicao) => {
     const matchesSearch =
       medicao.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      medicao.unidadeConsumidora.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      medicao.hypolito.toLowerCase().includes(searchTerm.toLowerCase());
+      medicao.unidadeConsumidora.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesTipo =
       filterTipo === "todos" || medicao.tipo === filterTipo;
