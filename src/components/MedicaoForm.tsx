@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -244,7 +245,7 @@ export function MedicaoForm({ onSaveMedicao }: MedicaoFormProps) {
                     render={({ field }) => (
                       <TimePicker
                         label={t('medicao.hora')}
-                        value={field.value ? parseTimeString(field.value) : null}
+                        value={parseTimeString(field.value)}
                         onChange={(time) => {
                           if (time) {
                             field.onChange(format(time, 'HH:mm'));
@@ -348,8 +349,8 @@ export function MedicaoForm({ onSaveMedicao }: MedicaoFormProps) {
 function parseTimeString(timeString: string): Date {
   const [hours, minutes] = timeString.split(':').map(Number);
   const date = new Date();
-  date.setHours(hours);
-  date.setMinutes(minutes);
+  date.setHours(hours || 0);
+  date.setMinutes(minutes || 0);
   date.setSeconds(0);
   date.setMilliseconds(0);
   return date;
@@ -391,7 +392,7 @@ function Lightbulb(props: any) {
     >
       <line x1="9" y1="18" x2="15" y2="18" />
       <line x1="10" y1="22" x2="14" y2="22" />
-      <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+      <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8A6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
     </svg>
   );
 }
