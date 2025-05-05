@@ -17,7 +17,13 @@ export default function MedicaoPage() {
     const medicoes = storedMedicoes ? JSON.parse(storedMedicoes) : [];
     
     // Adiciona nova medição
-    medicoes.push(medicao);
+    medicoes.push({
+      ...medicao,
+      // Garantimos que os campos de hotel estejam presentes mesmo quando vazios
+      numeroHospedes: medicao.numeroHospedes || 0,
+      unidadesHabitacionaisLocadas: medicao.unidadesHabitacionaisLocadas || 0,
+      hora: medicao.hora || '',
+    });
     
     // Salva no localStorage
     localStorage.setItem('medicoes', JSON.stringify(medicoes));

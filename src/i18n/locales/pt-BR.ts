@@ -47,6 +47,7 @@ export default {
     leitura: 'Leitura',
     filtros: 'Filtros',
     limpar: 'Limpar filtros',
+    uh: 'UH Locadas',
     dashboards: {
       tituloAgua: 'Consumo de Água',
       tituloEnergia: 'Consumo de Energia',
